@@ -541,8 +541,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .div-subscr {
     display: flex;
-    flex-direction: column;
     margin-left: 80px;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
@@ -600,7 +600,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     line-height: 1.5;
     letter-spacing: 0.04em;
     border: none;
-    margin-left: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -610,6 +609,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .subscr-svg {
     margin-left: 16px;
+    fill: #ffffff;
 }
 
 .backdrop {
@@ -682,12 +682,12 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 }
 
-.modal-close-svg {
+.close-svg {
     fill: #2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-svg:focus, .modal-close-svg:hover {
+.close-svg:focus, .close-svg:hover {
  fill: #ffffff
 }
 
@@ -698,7 +698,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
         line-height: 150%;
         letter-spacing: 0.02em;
         margin-bottom: 16px;
-        margin-top: 24px;
         color: #2E2F42;
 }
 
@@ -749,8 +748,16 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon:focus {
- fill: #4D5AE5;
+
+.modal-icon:focus, .modal-icon:hover+.modal-input:focus, .modal-input:hover{
+    fill: #4D5AE5;
+    border-color: #4D5AE5;
+}
+
+.modal-input+
+
+.div-comment {
+    margin-bottom: 16px;
 }
 
 .modal-textarea {
@@ -783,6 +790,17 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     fill: #F4F4FD;
 }
 
+.visually-hidden {
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+}
+
 .privacy-policy {
     color: #4D5AE5;
 }
@@ -806,6 +824,16 @@ display: inline-flex;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-span:hover, .modal-span:focus {
+    background-color: #404bbf;
+        border: none;
+    
+}
+
+.accept-svg {
+    fill: #ffffff;
 }
 
 .send-button {
