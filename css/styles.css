@@ -829,6 +829,19 @@ input[type="checkbox"]:checked+.user-agreement-text>.custom-checkbox {
     fill: #F4F4FD;
 }
 
+.visually-hidden {
+position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /*
 input[type="checkbox"]:checked + .user-agreement-text > .custom-checkbox > .icon-custom-checkbox > {
   
@@ -846,18 +859,25 @@ input[type="checkbox"]:checked + .user-agreement-text > .custom-checkbox > .icon
     text-decoration-skip-ink: none;
 }
 
-.button .btn-modal {
-display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
+.send-button {
+display: block;
+margin: auto;
+min-width: 169px;
+height: 56px;
 
-    gap: 10px;
-    border-radius: 4px;
-    padding: 16px 32px;
-    width: 169px;
-    height: 56px;
+font-family: "Roboto", sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.04em;
 
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+background-color: #4d5ae5;
+color: #ffffff;
+
+cursor: pointer;
+border: none;
+border-radius: 4px;
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
